@@ -1,0 +1,78 @@
+
+.thumbnail {
+    padding: 0;
+}
+.thumbnail img {
+    width: 100%;
+}
+.inline-form {
+    display: inline;
+}
+
+.comment-delete {
+    background: none;
+    border: none;
+    color: #337ab7;
+    font-size: 14px;
+}
+.comment-delete:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+.index-img:hover {
+    opacity: 0.8;
+}
+
+.form-width {
+    width: 60%;
+    margin: 30px auto;
+}
+.forms {
+    margin-top: 50px;
+}
+
+.disp-flex {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.jumbotron {
+    background: url('https://images.pexels.com/photos/803226/pexels-photo-803226.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350') center;
+    background-size: cover;
+    color: rgb(230,230,230);
+}
+#divider {
+    width: 70%;
+}
+
+#su-btn {
+    color: yellow;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 110%;
+}
+
+#jumbo-lead,
+#jumbo-p1,
+#jumbo-p2{
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 990px) {
+    .form-width {
+        width: 90%;
+    }    
+    
+    #jumbo-lead {
+        font-size: 50px;
+    }
+}
+@media (max-width: 768px) {
+    #jumbo-lead {
+        font-size: 30px;
+    }
+    #jumbo-p1,
+    #jumbo-p2{
+        font-size: 15px;
+    }
+}

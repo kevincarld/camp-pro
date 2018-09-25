@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Camp Pro</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Camp Pro</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+                <% if(!currentUser) { %>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Sign up</a></li>
+                <% } else { %>
+                    <li><a href="#">Signed in as: <%=currentUser.username%></a></li>
+                    <li><a href="/logout">Log out</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>
+<% if(errorMsg && errorMsg.length > 0) { %>
+<div class="container">
+    <div class="alert alert-danger">
+        <%=errorMsg%>
+    </div> 
+<% } %>
+</div>
+
+<div class="container">
+<% if(successMsg && successMsg.length > 0) { %>
+    <div class="alert alert-success">
+        <%=successMsg%>
+    </div>
+<% } %>
+</div>
+

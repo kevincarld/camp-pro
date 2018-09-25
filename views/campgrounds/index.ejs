@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+
+
+
+<div class="container">
+    <header class="jumbotron">
+        <h1 id="jumbo-lead">Welcome to Camp Pro</h1> 
+        <% if(!currentUser) { %>
+        <p id="jumbo-p1"><a id="su-btn" href="/register">Sign up</a> today and post your favorite camp sites!</p>
+        <% } else { %>
+        <p id="jumbo-p2">Have fun browsing camp site posts!</p>
+        <% } %>
+        <p>
+            <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add a Campground</a>
+        </p>
+    </header>
+    
+    
+       <hr id="divider"><br>
+    
+    <div class="row disp-flex">
+        <% campgrounds.forEach(function(campground) { %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <a href="/campgrounds/<%= campground._id %>"><img class="index-img" src="<%= campground.image %>" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350';" ></a>
+                <div class="caption">
+                    <h3><%= campground.name %></h3>
+                    <small><a href="/campgrounds/<%= campground._id %>" class="btn btn-xs btn-info">see more info <i class="far fa-eye"></i></a></small>
+                </div>
+            </div>
+        </div>        
+        <% }); %>
+    </div>
+    
+    
+
+
+</div>
+<% include ../partials/footer %>
