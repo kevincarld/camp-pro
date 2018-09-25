@@ -19,7 +19,10 @@ var campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
         
 //setting up db        
-mongoose.connect("mongodb://localhost:27017/campdb", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost:27017/campdb", { useNewUrlParser: true });
+mongoose.connect("mongodb://kevin:pogi123@ds113873.mlab.com:13873/campdb", { useNewUrlParser: true });
+
+
 //configs
 app.set("view engine", "ejs");
 app.use(express.static(__dirname+"/public"));

@@ -7,12 +7,14 @@ body {
   position: relative;
   text-align: center;
   padding-top: 40vh;
+  
 }
 
 #landing-header h1 {
   color: #fff;
   padding-bottom: 2rem;
   font-size: 76px;
+  text-shadow: 1px 1px 15px black;
 }
 
 a {
