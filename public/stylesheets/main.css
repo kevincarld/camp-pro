@@ -1,4 +1,35 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
 
+.left-nav {
+    line-height:65px; 
+    font-size:15px; 
+    padding-left: 15px;    
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+.signedin {
+    color: #58AED1 !important;    
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
 .thumbnail {
     padding: 0;
 }
@@ -22,6 +53,9 @@
 .index-img:hover {
     opacity: 0.8;
 }
+.index-img {
+    height: 190px!important;
+}
 
 .form-width {
     width: 60%;
@@ -41,6 +75,22 @@
     background-size: cover;
     color: rgb(230,230,230);
 }
+
+.fa-tree {
+    font-size: 25px;
+    color: #3d7e00;
+}
+
+.anim {
+    font-size: 70px;
+    color: #3d7e00;
+    animation: jiggle 2s ease-in infinite;
+}
+
+.frm-head {
+    color: #6f6f6f;
+}
+
 #divider {
     width: 70%;
 }
@@ -56,6 +106,23 @@
 #jumbo-p1,
 #jumbo-p2{
     text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+
+
+@keyframes jiggle {
+  48%, 62% {
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    transform: scale(1.1, 0.9)
+  }
+  56% {
+    transform: scale(0.9, 1.1) translate(0, -5px)
+  }
+  59% {
+    transform: scale(1.0, 1.0) translate(0, -3px)
+  }
 }
 
 @media (max-width: 990px) {

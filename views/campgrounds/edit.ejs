@@ -2,7 +2,8 @@
 
 <div class="container">
    <div class="row text-center">
-       <h3>edit camp: <%= camp.name%></h3>
+       <span class="fas fa-tree anim"></span><br>
+       <h3 class="frm-head">edit camp: <%= camp.name%></h3>
         <form class="form-width" action="/campgrounds/<%=camp._id%>?_method=PUT" method="POST">
             <div class="form-group">
                 <input class="form-control" type="text" name="campground[name]" value="<%=camp.name%>" required>

@@ -3,7 +3,7 @@
 
 <div class="container">
    <div class="row text-center">
-       <h3>Edit your comment</h3>
+       <h3 class="frm-head">Edit your comment</h3>
         <form  class="form-width" action="/campgrounds/<%=camp_id%>/comments/<%=comment._id%>/edit?_method=PUT" method="POST">
             <div class="form-group">
                 <input class="form-control" type="text" name="comment[text]" value="<%=comment.text%>" required>
@@ -14,6 +14,6 @@
              <a href="/campgrounds/<%=camp_id%>">Go Back</a>
         </form>
     </div>
-</div>
 
+</div>
 <% include ../partials/footer %>
