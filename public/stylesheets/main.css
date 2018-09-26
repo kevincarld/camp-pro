@@ -89,6 +89,12 @@ body {
     color: #6f6f6f;
 }
 
+.comment-author {
+    text-transform: uppercase;
+}
+.comment-text {
+    font-style: italic;
+}
 #divider {
     width: 70%;
 }
