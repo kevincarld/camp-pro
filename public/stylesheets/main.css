@@ -8,13 +8,11 @@ body {
 }
 
 .left-nav {
-    line-height:65px; 
     font-size:15px; 
-    padding-left: 15px;    
 }
 
 .navbar-brand {
-    padding: 10px 15px;
+    padding: 10px 35px 10px 15px;
 }
 
 .signedin {
