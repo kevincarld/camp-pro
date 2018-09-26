@@ -17,10 +17,11 @@ app.use(flash()); //for flash msgs
 var campgroundRoutes = require("./routes/campgrounds"),
     commentRoutes = require("./routes/comments"),
     indexRoutes = require("./routes/index");
-        
+
+   var dburl = process.env.DATABASEURL || "mongodb://localhost:27017/campdb";
 //setting up db        
 // mongoose.connect("mongodb://localhost:27017/campdb", { useNewUrlParser: true });
-mongoose.connect("mongodb://kevin:pogi123@ds113873.mlab.com:13873/campdb", { useNewUrlParser: true });
+mongoose.connect(dburl, { useNewUrlParser: true });
 
 
 //configs
