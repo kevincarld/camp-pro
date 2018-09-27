@@ -10,15 +10,23 @@ body {
   
 }
 
-#landing-header h1 {
+ #welc {
+   opacity: 0;
+  font-weight: 300;
+  letter-spacing: 10px;
   color: #fff;
-  padding-bottom: 2rem;
+  padding-bottom: 30px;
   font-size: 76px;
   text-shadow: 1px 1px 15px black;
+  animation: 2s slideFadeH1 1.2s forwards;
+  
 }
 
-a {
+.btn {
     font-size: 30px!important;
+    margin-top: 40px;
+    opacity: 0;
+    animation: 2s slideFadeA 1.2s forwards;
 }
 .slideshow { 
   position: fixed;
@@ -64,6 +72,19 @@ a {
 .slideshow li:nth-child(5) { 
   background-image: url('https://images.pexels.com/photos/14287/pexels-photo-14287.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350');
   animation-delay: 40s; 
+}
+
+@keyframes slideFadeH1{
+  100% {
+    opacity: 1;
+    letter-spacing:  -2px;
+  }  
+}
+@keyframes slideFadeA{
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }  
 }
 
 @keyframes imageAnimation { 
